@@ -1,8 +1,5 @@
 // Import MySQL connection.
-const connection = require('../config/connection.js');
-
-// Import MySQL connection.
-var connection = require('../config/connection.js');
+const connection = require('../config/connection');
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.
@@ -103,6 +100,4 @@ var orm = {
 };
 
 // Export the orm object for the model (cat.js).
-module.exports = {
-	orm
-};
+module.exports = orm;

@@ -21,7 +21,7 @@ app.engine(".hbs", exphbs({ defaultLayout: "main", extname: '.hbs' }));
 app.set("view engine", ".hbs");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/burger_controller.js");
+var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
