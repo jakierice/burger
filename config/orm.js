@@ -1,11 +1,6 @@
 // Import MySQL connection.
 const connection = require('../config/connection');
 
-// Helper function for SQL syntax.
-// Let's say we want to pass 3 values into the mySQL query.
-// In order to write the query, we need 3 question marks.
-// The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
-// ["?", "?", "?"].toString() => "?,?,?";
 var printQuestionMarks = (num) => {
 	var arr = [];
 
@@ -25,13 +20,10 @@ var objToSql = (ob) => {
 		var value = ob[key];
 		// check to skip hidden properties
 		if (Object.hasOwnProperty.call(ob, key)) {
-			// if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+
 			if (typeof value === 'string' && value.indexOf(' ') >= 0) {
 				value = "'" + value + "'";
 			}
-			// e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-			// e.g. {sleepy: true} => ["sleepy=true"]
-			// arr.push(key + "=" + value);
 			arr.push(`${key} = ${value}`);
 		}
 	}
@@ -64,19 +56,16 @@ var orm = {
 		var queryString = `INSERT INTO ${table} (${cols.toString()})
 								VALUE (${printQuestionMarks(vals.length)})`
 
-		console.log(queryString);
-
 		connection.query(queryString, vals, (err, result) => {
 			if (err) throw err;
 
 			callback(result);
 		});
 	},
-	// An example of objColVals would be {name: panther, sleepy: true}
+
 	update: (table, objColVals, condition, callback) => {
 		var queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`
 
-		console.log(queryString);
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;
 
@@ -85,5 +74,4 @@ var orm = {
 	}
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;

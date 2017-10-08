@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
 			req.body.name,
 			req.body.retailer
 		], () => {
-			res.redirect('/');
+			res.redirect('/need_to_buy');
 		});
 });
 
@@ -54,7 +54,7 @@ router.put('/:id', (req, res) => {
 	flavor.update({
 		tasted: req.body.tasted
 	}, condition, () => {
-		res.redirect('/');
+		res.redirect('/tasted');
 	});
 });
 
