@@ -1,17 +1,36 @@
+<div data-sticky-container>
+	<div class="sticky" data-sticky data-margin-top="0">
+		<div class="small-12 show-for-medium rowHeader">
+			<div class="grid-x align-justify">
+				<div class="medium-6 cell">
+					<h4>Flavor</h4>
+				</div>
+				<div class="medium-3 cell">
+					<h4>Retailer</h4>
+				</div>
+				<div class="medium-3 cell">
+					<h4>Tasted yet?</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="small-12 cell">
 	{{#each flavors}} {{#unless this.tasted}} {{#if this.personal_stock}}
-	<div class="grid-x grid-padding-x">
-		<div class="small-10 medium-6 cell">
-			{{this.flavor_name}}
-		</div>
-		<div class="small-10 medium-3 cell">
-			{{this.retailer_name}}
-		</div>
-		<div class="small-12 medium-3 cell">
-			<form action="/{{this.id}}?_method=PUT" method="POST">
-				<input type="hidden" name="tasted" value="true">
-				<button type="submit" class="button">Tasted!</button>
-			</form>
+	<div class="small-12 cell flavorRow">
+		<div class="grid-x grid-padding-x grid-padding-y align-center">
+			<div class="small-12 medium-6 cell">
+				{{this.flavor_name}}
+			</div>
+			<div class="small-12 medium-3 cell">
+				{{this.retailer_name}}
+			</div>
+			<div class="small-5 medium-3 cell">
+				<form action="/{{this.id}}?_method=PUT" method="POST">
+					<input type="hidden" name="tasted" value="true">
+					<button type="submit" class="button">Tasted!</button>
+				</form>
+			</div>
 		</div>
 	</div>
 	{{/if}} {{/unless}} {{/each}}
