@@ -1,27 +1,27 @@
 const orm = require('./../config/orm');
 
-var burger = {
+var flavor = {
 	all: (callback) => {
-		orm.all('burgers', (res) => {
+		orm.all('flavors', (res) => {
 			callback(res);
 		});
 	},
 	findBy: (col, val, callback) => {
-		orm.findBy('burgers', val, (res) => {
+		orm.findBy('flavors', val, (res) => {
 			callback(res);
 		});
 	},
 	// The variables cols and vals are arrays.
 	create: (cols, vals, callback) => {
-		orm.create('burgers', cols, vals, (res) => {
+		orm.create('flavors', cols, vals, (res) => {
 			callback(res);
 		});
 	},
 	update: (objColVals, condition, callback) => {
-		orm.update('burgers', objColVals, condition, (res) => {
+		orm.update('flavors', objColVals, condition, (res) => {
 			callback(res);
 		});
 	}
 };
 
-module.exports = burger;
+module.exports = flavor;

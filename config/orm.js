@@ -43,8 +43,8 @@ var objToSql = (ob) => {
 // Object for all our SQL statement functions.
 var orm = {
 	all: (tableInput, callback) => {
-		// var queryString = "SELECT * FROM " + tableInput + ";";
 		var queryString = `SELECT * FROM ${tableInput}`;
+		
 		connection.query(queryString, (err, result) => {
 			if (err) throw err;
 
@@ -64,14 +64,6 @@ var orm = {
 		var queryString = `INSERT INTO ${table} (${cols.toString()})
 								VALUE (${printQuestionMarks(vals.length)})`
 
-		// var queryString = "INSERT INTO " + table;
-		// queryString += " (";
-		// queryString += cols.toString();
-		// queryString += ") ";
-		// queryString += "VALUES (";
-		// queryString += printQuestionMarks(vals.length);
-		// queryString += ") ";
-
 		console.log(queryString);
 
 		connection.query(queryString, vals, (err, result) => {
@@ -83,12 +75,6 @@ var orm = {
 	// An example of objColVals would be {name: panther, sleepy: true}
 	update: (table, objColVals, condition, callback) => {
 		var queryString = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition}`
-		// var queryString = "UPDATE " + table;
-
-		// queryString += " SET ";
-		// queryString += objToSql(objColVals);
-		// queryString += " WHERE ";
-		// queryString += condition;
 
 		console.log(queryString);
 		connection.query(queryString, (err, result) => {

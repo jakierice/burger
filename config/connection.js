@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
 	// password: 'evaunit2',
 	user: keys.user,
 	password: keys.password,
-	database: "burgers_db"
+	database: "flavors_db"
 });
 
 // Make connection.

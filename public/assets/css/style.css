@@ -1,3 +1,112 @@
-.burgerList {
+/* 
+COLORS
+
+light blue-green
+#51A3A3
+dark blue-green
+#1A535C
+orange
+#F75C03
+white
+#F7FFF7
+pink
+#FF6B6B
+*/
+
+#sidebar {
+	background-color: #1A535C;
+	height: 100vh;
+	display: block;
+	color: white;
+}
+
+#sidebarNav {
+	width: 100%;
+	text-align: left;
+	margin: 0px auto;
 	list-style: none;
+}
+
+#sidebarNav h1 {
+	border-bottom: 12px solid white;
+	text-align: right;
+}
+
+.pageTitle {
+	/* border-bottom: 12px solid #1A535C; */
+}
+
+#sidebarNav .button {
+	text-align: left;
+	margin: 0px;
+	background-color: transparent;
+	font-size: 1.2rem;
+}
+
+#sidebarNav .button:hover {
+	/* background-color: #FB3640; */
+	border-right: 5px solid #FB3640;
+	border-left: 5px solid #FB3640;
+}
+
+.sidebarNavIcon {
+	float: right;
+}
+
+.flavorRow:hover {
+	border-bottom: 2px solid #FB3640;
+	cursor: pointer;
+}
+
+.button {
+	width: 100%;
+}
+
+.badge, .button {
+	background-color: #FB3640;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 3px black;
+}
+
+.button:hover {
+	background-color: #0F8B8D;
+	box-sizing: border-box;
+}
+
+#header {
+	background-color: #1A535C;
+}
+
+#header h1 {
+	margin-left: 20px;
+	height: 8vh;
+	color: white;
+}
+
+[data-sticky] {
+	width: 100%;
+}
+
+
+/* scroll bars */
+
+::-webkit-scrollbar {
+	 /* width: 12px; */
+	 display: none;
+}
+
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: white;
+	 border-radius: 10px; */
+	 display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    /* border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	 box-shadow: inset 0 0 6px rgba(0,0,0,0.5); */
+	 display: none;
 }

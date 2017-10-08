@@ -1,14 +1,18 @@
-DROP DATABASE IF EXISTS burgers_db;
+DROP DATABASE IF EXISTS flavors_db;
 
-CREATE DATABASE burgers_db;
+CREATE DATABASE flavors_db;
 
-USE burgers_db;
+USE flavors_db;
 
-CREATE TABLE IF NOT EXISTS burgers (
+DROP TABLE IF EXISTS flavors;
+
+CREATE TABLE flavors (
 	id INTEGER(11) AUTO_INCREMENT NOT NULL,
-	burger_name VARCHAR(100) NOT NULL,
-	devoured BOOLEAN NOT NULL DEFAULT false,
+	flavor_name VARCHAR(100) NOT NULL,
+	personal_stock BOOLEAN NOT NULL DEFAULT false,
+	tasted BOOLEAN NOT NULL DEFAULT false,
+	rating INTEGER(2),
+	retailer_name VARCHAR(11),
 	date TIMESTAMP,
 	PRIMARY KEY(id)
 );
-

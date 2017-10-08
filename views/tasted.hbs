@@ -1,0 +1,27 @@
+<div class="grid-x grid-padding-x align-justify">
+	<div class="small-12 cell" id="tastedFlavors">
+		<div class="grid-x">
+			<div class="small-12 cell">
+				<h1 class="pageTitle">Already Tasted</h1>
+			</div>
+			{{#each flavors}} {{#if this.tasted}}
+			<div class="small-12 cell flavorRow" name="">
+				<div class="grid-x align-justify">
+					<div class="small-12 medium-5 cell">
+						{{this.flavor_name}}
+					</div>
+					<div class="small-12 medium-2 cell">
+						{{this.retailer_name}}
+					</div>
+					<div class="small-12 medium-4 cell">
+						{{moment this.date "MMM, Do, YYYY"}}
+					</div>
+					<div class="small-12 medium-1 cell">
+						{{#if this.rating}}<span class="badge">{{this.rating}}</span>{{/if}}
+					</div>
+				</div>
+			</div>
+			{{/if}} {{/each}}
+		</div>
+	</div>
+</div>
