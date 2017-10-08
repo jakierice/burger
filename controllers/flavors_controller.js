@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
 			title: 'In the Freezer',
 			flavors: data
 		};
-		console.log(hbsObject);
 		res.render('index', hbsObject);
 	});
 });
@@ -23,7 +22,6 @@ router.get('/tasted', (req, res) => {
 			title: 'Already Tasted',
 			flavors: data
 		};
-		console.log(hbsObject);
 		res.render('tasted', hbsObject);
 	});
 });
@@ -34,7 +32,6 @@ router.get('/need_to_buy', (req, res) => {
 			title: 'Need to Buy',
 			flavors: data
 		};
-		console.log(hbsObject);
 		res.render('needToBuy', hbsObject);
 	});
 });
@@ -54,8 +51,6 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
 	var condition = `id = ${req.params.id}`;
 
-	console.log('condition', condition);
-
 	flavor.update({
 		tasted: req.body.tasted
 	}, condition, () => {
@@ -65,8 +60,6 @@ router.put('/:id', (req, res) => {
 
 router.put('/personal_stock/:id', (req, res) => {
 	var condition = `id = ${req.params.id}`;
-
-	console.log('condition', condition);
 
 	flavor.update({
 		personal_stock: req.body.personalStock
