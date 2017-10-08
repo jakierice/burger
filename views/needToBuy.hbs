@@ -1,9 +1,6 @@
-<div id="needToBuy">
-	<div class="small-12 cell" id="needToBuyTitle">
-		<h1>Need to Buy</h1>
-	</div>
+<div class="small-12 cell">
 	{{#each flavors}} {{#unless this.tasted}} {{#unless this.personal_stock}}
-	<div class="grid-x grid-padding-x">
+	<div class="grid-x grid-padding-x align-justify">
 		<div class="small-10 medium-6 cell">
 			{{this.flavor_name}}
 		</div>

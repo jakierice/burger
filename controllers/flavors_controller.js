@@ -9,6 +9,7 @@ const flavor = require('../models/flavor');
 router.get('/', (req, res) => {
 	flavor.all((data) => {
 		var hbsObject = {
+			title: 'In the Freezer',
 			flavors: data
 		};
 		console.log(hbsObject);
@@ -19,6 +20,7 @@ router.get('/', (req, res) => {
 router.get('/tasted', (req, res) => {
 	flavor.all((data) => {
 		var hbsObject = {
+			title: 'Already Tasted',
 			flavors: data
 		};
 		console.log(hbsObject);
@@ -29,6 +31,7 @@ router.get('/tasted', (req, res) => {
 router.get('/need_to_buy', (req, res) => {
 	flavor.all((data) => {
 		var hbsObject = {
+			title: 'Need to Buy',
 			flavors: data
 		};
 		console.log(hbsObject);

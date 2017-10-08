@@ -1,23 +1,25 @@
-/* 
-COLORS
+/*
+FONTS
 
-light blue-green
-#51A3A3
-dark blue-green
-#1A535C
-orange
-#F75C03
-white
-#F7FFF7
-pink
-#FF6B6B
+font-family: 'Ewert', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Leckerli One', cursive;
 */
 
+@import url('https://fonts.googleapis.com/css?family=Ewert|Lato|Leckerli+One');
+
+body {
+	color: #3F3F37;
+	text-shadow: 0px 0px 3px white;
+	font-family: 'Lato', sans-serif;
+}
+
 #sidebar {
-	background-color: #1A535C;
+	background-color: #D6D6B1;
+	border-right: 2px solid white;
+	/* box-shadow: 0px 8px 8px #3F3F37; */
 	height: 100vh;
 	display: block;
-	color: white;
 }
 
 #sidebarNav {
@@ -27,16 +29,40 @@ pink
 	list-style: none;
 }
 
-#sidebarNav h1 {
-	border-bottom: 12px solid white;
-	text-align: right;
+h1 {
+	margin: 0px;
+	background-color: #3F3F37;
+	font-family: 'Ewert', cursive;
+	font-size: 2.5rem;
+	color: white;
+	text-shadow: 0px 0px 3px black;
+	text-align: center;
 }
 
-.pageTitle {
-	/* border-bottom: 12px solid #1A535C; */
+h2 {
+	font-family: 'Leckerli One', cursive;
+	color: white;
+	text-shadow: 0px 0px 3px #3F3F37;
+}
+
+#sidebar h2 {
+	background-color: #FB3640;
+	border-top: 4px solid white;
+	border-bottom: 4px solid white;
+	text-align: center;
+}
+
+#mainContent {
+	min-height: 120vh;
+	box-shadow: 2px 7px 8px #3F3F37 inset;
+}
+
+#mainContentTitle {
+	margin-bottom: 7px;
 }
 
 #sidebarNav .button {
+	width: 100%;
 	text-align: left;
 	margin: 0px;
 	background-color: transparent;
@@ -58,8 +84,9 @@ pink
 	cursor: pointer;
 }
 
-.button {
+.button:not(.navButton) {
 	width: 100%;
+	box-shadow: 2px 3px 5px #3F3F37;
 }
 
 .badge, .button {
@@ -74,20 +101,10 @@ pink
 	box-sizing: border-box;
 }
 
-#header {
-	background-color: #1A535C;
+#newflavorInput, #newFlavorRetailer {
+	border-radius: 5px;
+	box-shadow: 0px 0px 3px #3F3F37 inset;
 }
-
-#header h1 {
-	margin-left: 20px;
-	height: 8vh;
-	color: white;
-}
-
-[data-sticky] {
-	width: 100%;
-}
-
 
 /* scroll bars */
 

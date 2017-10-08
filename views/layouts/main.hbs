@@ -21,35 +21,50 @@
 					<div class="medium-12 cell" id="sidebarNav">
 						<h1>MYce Cream</h1>
 						<form action="/" method="GET">
-							<button type="submit" class="button">Personal Stock <span class="fi-home sidebarNavIcon"></span></button>
+							<button type="submit" class="button navButton">Personal Stock <span class="fi-home sidebarNavIcon"></span></button>
 						</form>
 						<form action="/need_to_buy" method="GET">
-							<button type="submit" class="button">Need to Buy <span class="fi-shopping-cart sidebarNavIcon"></span></button>
+							<button type="submit" class="button navButton">Need to Buy <span class="fi-shopping-cart sidebarNavIcon"></span></button>
 						</form>
 						<form action="/tasted" method="GET">
-							<button type="submit" class="button">Tasted <span class="fi-checkbox sidebarNavIcon"></span></button>
+							<button type="submit" class="button navButton">Tasted <span class="fi-checkbox sidebarNavIcon"></span></button>
 						</form>
 					</div>
 					<div class="medium-12 cell">
+						<h2>Add Flavor</h2>
 						<form action="/" method="POST">
-							<div class="grid-x align-center" id="addFlavorForm">
-								<div class="medium-10 cell">
+							<div class="grid-x grid-padding-x grid-padding-y align-right" id="addFlavorForm">
+								<div class="medium-12 cell">
 									<input type="text" class="form-control small-12" name="name" id="newflavorInput" placeholder="Flavor name...">
 								</div>
-								<div class="medium-10 cell">
+								<div class="medium-12 cell">
 									<input type="text" class="form-control small-12 medium-5 cell" name="retailer" id="newFlavorRetailer" placeholder="Available at...">
 								</div>
-								<div class="medium-7 cell">
+								<div class="medium-4 cell">
 									<button type="submit" class="button">ADD</button>
 								</div>
 							</div>
 						</form>
 					</div>
+					<div class="medium-12 cell">
+						<img src="/assets/images/ice_cream.png" alt="" id="iceCreamIcon">
+					</div>
 				</div>
 			</div>
 		</div>
 		<div class="small-12 medium-9 cell" id="mainContent">
-			{{{ body }}}
+
+			<div data-sticky-container class="show-for-medium" id="mainContentTitle">
+				<div class="sticky" data-sticky data-margin-top="0">
+					<h1>{{title}}</h1>
+				</div>
+			</div>
+
+			<div class="grid-x grid-padding-x align-justify" id="needToBuy">
+				<div class="small-12 cell">
+					{{{ body }}}
+				</div>
+			</div>
 		</div>
 	</div>
 
