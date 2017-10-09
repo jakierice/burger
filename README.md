@@ -20,3 +20,7 @@ The various functions and views of the app can be navigated using the buttons an
 * Rating
 
 ![MYce Cream](https://image.flaticon.com/icons/png/512/284/284758.png)
+
+## Issues
+* Need to add user authentication so that users only have access to their flavors.
+* Need to add rating feature.
