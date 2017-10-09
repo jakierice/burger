@@ -1,5 +1,4 @@
 # MYce Cream
-![MYce Cream](https://image.flaticon.com/icons/png/512/284/284758.png)
 
 ## Overview
 MYce Cream is an app that allows users to input and track the flavors of ice cream they have already tried and those they would like to try. Users can add new flavors of ice cream as well as what retailer sales that flavor.
@@ -20,3 +19,4 @@ The various functions and views of the app can be navigated using the buttons an
 * Date Tasted
 * Rating
 
+![MYce Cream](https://image.flaticon.com/icons/png/512/284/284758.png)
